@@ -4,6 +4,8 @@ project:
 website:
   title: Zero to Website with Quarto Workshop 
   description: "Zero to website with Quarto Workshop for Data Science Learning Community 2024"
+  site-url: https://charlotte.quarto.pub/dslc24/
+  image: thumbnail.jpeg
   open-graph: true 
   search: false
   page-footer: "Made with ❤️ and Quarto"
