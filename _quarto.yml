@@ -12,6 +12,7 @@ website:
     alignment: center
     style: docked
     logo: dslc_edu_line_white.png
+    logo-alt: Data Science Learning Community Logo
     contents:
       - href: index.qmd
         text: Home
