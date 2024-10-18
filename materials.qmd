@@ -3,7 +3,7 @@ title: Materials
 ---
 
 ```{=html}
-<iframe class="slide-deck" src="slides.html" height="420" width="747" style="border: 1px solid #2e3846;"></iframe>
+<iframe class="slide-deck" src="slides.html" height="420" width="747" style="border: 1px solid #2e3846;" title="Slides"></iframe>
 ```
 
 [View slides fullscreen](slides.qmd)
