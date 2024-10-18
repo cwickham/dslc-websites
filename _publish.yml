@@ -1,0 +1,4 @@
+- source: project
+  quarto-pub:
+    - id: a126d1f7-20c8-404f-a63a-54637fdfccfd
+      url: 'https://charlotte.quarto.pub/dslc24'
