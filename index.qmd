@@ -1,0 +1,24 @@
+---
+title: Zero to Website with Quarto
+subtitle: Data Science Learning Community Workshop
+---
+
+## Get Started
+
+Head to workshop [Materials](materials.qmd)
+
+## Description
+
+As a data professional, at some point, you’ll want a website, whether it’s for yourself, a project, or a research group. Quarto is a great way to make one: build your site with plain text files that you can edit in your favorite tool and check in to version control; structure your content into folders and pages in a way that makes sense to you; create content that includes code and its output; and generate listing pages that help readers navigate collections of content like projects, publications or people.
+
+In this workshop, you'll walk you through the process from scratch. You’ll see how to get started with a basic template and then edit it to your needs, including adding pages, customizing navigation, adding a blog or other listing, personalizing the appearance, and getting it online.
+
+This workshop will be hands-on, and you'll need to prepare a few things before it begins. Look for instructions closer to the day. It will help if you've already used Quarto to produce documents, but I'll provide a few resources to get you up to speed beforehand if you haven't. You don't need any HTML, CSS/SCSS or Git/GitHub experience, nor do you need any particular programming language (R, Python etc.) or level of programming experience.
+
+## Your Instructor
+
+[**Dr. Charlotte Wickham**](http://cwick.co.nz) (she/her) is a member of the Developer Relations team at Posit, where she works closely with the Quarto team. As part of her job at Posit, Charlotte helps to keep [quarto.org](https://quarto.org)---a website about, and also built with, Quarto---up to date. Prior to Posit, she taught Statistics and Data Science at Oregon State University where she received awards for her in-person and online teaching.
+
+---
+
+![](https://i.creativecommons.org/l/by/4.0/88x31.png) This work is licensed under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).

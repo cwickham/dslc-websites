@@ -1,0 +1,15 @@
+---
+title: Materials
+---
+
+```{=html}
+<iframe class="slide-deck" src="slides.html" height="420" width="747" style="border: 1px solid #2e3846;"></iframe>
+```
+
+[View slides fullscreen](slides.qmd)
+
+
+## Pre-Work
+
+Make sure you complete the [pre-work](prework.qmd) before the workshop starts. 
+

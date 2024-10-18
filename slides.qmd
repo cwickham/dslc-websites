@@ -1,0 +1,426 @@
+---
+title: "From Zero to Website with Quarto"
+author: Charlotte Wickham
+subtitle: DSLC 2024
+format: 
+  revealjs:
+    slide-number: true
+    theme: [default, slides.scss]
+    code-line-numbers: false
+---
+
+## Getting set up
+
+Make sure you've:
+
+1. Joined the RStudio Cloud workspace:  
+
+2. Started the "Website" assignment
+
+3. Created a Quarto Pub account: <https://quartopub.com/sign-up>
+
+::: footer
+Website + Slides: <https://charlotte.quarto.pub/dslc24>
+:::
+
+## Code of Conduct {.smaller .scrollable}
+
+```{=html}
+<iframe src="https://dslc.io/code_of_conduct.html" width="100%" height="400"></iframe>
+```
+
+::: footer
+<https://dslc.io/code_of_conduct.html>
+:::
+
+## Welcome!
+
+Hello, I'm Charlotte Wickham:
+
+- Developer Education at Posit
+- In Corvallis, Oregon
+- Longtime RMarkdown user, now Quarto user
+
+**TAs**: Derek Sollberger, Priyanka Gagneja, Federica Gazzeloni, and Collin Berke
+
+::: footer
+<https://charlotte.quarto.pub/dslc24>
+:::
+
+## Your Turn
+
+::: task
+Introduce yourself to your breakout room:
+
+-   Name
+-   Location
+-   Something you hope to get out of the workshop
+
+Check you are all [set up](#getting-set-up)
+:::
+
+5 mins
+
+::: footer
+<https://charlotte.quarto.pub/dslc24>
+:::
+
+## Outline
+
+Goal: You create a website with Quarto
+
+1.  Don't start from scratch
+3.  Add pages and customize navigation
+4.  Make the style your own
+5.  Publish
+6.  Use listings for "lists" of content
+
+
+::: footer
+<https://charlotte.quarto.pub/dslc24>
+:::
+
+## What to expect
+
+**My turns:** I'll use slides, and live code to demonstrate ideas.
+
+**Your Turns:** You practice what you've just seen in breakout rooms where TAs can help.
+
+Ask questions:
+
+- in zoom chat
+- in breakout room
+- in Slack (I'll answer after the workshop)
+
+::: footer
+<https://charlotte.quarto.pub/dslc24>
+:::
+
+# 1. Don't start from scratch
+
+## Before the workshop...
+
+::: callout-caution
+## DON'T RUN: Using a template
+
+This is what did before the workshop to get the template:
+
+``` {.bash filename="Terminal"}
+quarto use template cwickham/minimal-website
+```
+:::
+
+## Demo: Exploring `index.qmd` {.smaller}
+
+* Render/preview `index.qmd`. It becomes `index.html`, your homepage.
+
+* Regular Quarto document with:
+   
+   - YAML Header
+   - Content, possibly including code cells
+
+* Workflow: Edit, render/preview
+
+* Uses an `about` template: <https://quarto.org/docs/websites/website-about.html>
+
+* Other templates: `jolla`, `trestles`, `solana`, `marquee`, or `broadside`
+
+## Your Turn
+
+::: {.task}
+
+Edit `index.qmd`: 
+
+*  Change the `title` and `subtitle`
+*  Try a different template: `jolla`, `trestles`, `solana`, `marquee`, or `broadside`
+*  Edit, add, or remove items in `links`
+*  **Challenge**: Use a different `image`, and edit `image-alt`
+
+Spare time? Edit the *content* of the page
+
+:::
+
+8 mins
+
+## Demo: Use a different `image`
+
+1. Move new image into project
+2. Replace path
+3. Edit `image-alt`
+
+Paths in a `.qmd` are relative to the location of the `.qmd`
+
+
+# 2. Add pages and customize navigation
+
+## Demo: Add a page
+
+1.  New Quarto Document: `projects.qmd` 
+
+    ```{.markdown shortcodes="false" filename="projects.qmd"}
+    ---
+    title: Projects
+    ---
+
+    Some projects I've worked on:
+
+    ```
+
+2.  File path becomes URL path: `{ site url }/projects.html`
+
+## Demo: Add navigation
+
+`_quarto.yml`: configuration file
+
+::: {.columns}
+::: {.column .fragment}
+``` {.yaml}
+project:
+  type: website
+```
+Identifies this as a Quarto website
+:::
+::: {.column .fragment}
+
+``` {.yaml}
+website:
+  navbar:
+    right: 
+      - projects.qmd
+```
+Controls navigation and other website settings 
+:::
+::: 
+
+## More file path examples {.smaller}
+
+File path becomes URL path
+
+::::: columns
+::: {.column width="40%"}
+**File location**
+
+`demo.qmd`
+
+`talks/index.qmd`
+
+`data/air-quality.csv`
+:::
+
+::: {.column width="60%"}
+**URL**
+
+`{ site url }/demo.html`
+
+`{ site url }/talks/`
+
+`{ site url }/data/air-quality.csv`
+:::
+:::::
+
+## Your Turn 
+
+::: {.task}
+
+1. Add a page
+2. Add a link to the page in the navigation
+3. Skim <https://quarto.org/docs/websites/website-navigation.html>. **What other types of navigation are available?**
+
+*Spare time*: Add content to the page
+
+:::
+
+8 mins
+
+## Demo: Navigation
+
+1. Put items on `left`
+1. Switch to a `sidebar` and back again
+2. Edit `tools`
+
+# 3.  Make the style your own
+
+## Option 1: Use built-in theme 
+
+``` {.yaml filename="_quarto.yml"}
+format:
+  html:
+    theme: [vapor]
+```
+
+List of available themes: <https://quarto.org/docs/output-formats/html-themes.html>
+
+::: footer
+<https://quarto.org/docs/output-formats/html-themes.html>
+:::
+
+## Option 2: Edit styles in `styles.scss` {.smaller}
+
+:::::: columns
+::: column
+``` {.yaml filename="_quarto.yml"}
+format:
+  html:
+    theme: [cosmo, styles.scss]
+```
+:::
+
+:::: column
+
+::: fragment
+``` {.scss filename="styles.scss"}
+/*-- scss:defaults --*/
+
+$body-bg: white; 
+$body-color: #333333;
+$primary: #333333;
+
+// Common variables to add a bit more color: 
+// $link-color, $headings-color, $navbar-bg
+$navbar-bg: #311e47;
+$headings-color: #311e47;
+```
+:::
+::::
+::::::
+
+::: footer
+<https://quarto.org/docs/output-formats/html-themes.html>
+:::
+
+# 4. Publish
+
+## Demo: Use `quarto publish`
+
+``` {.bash filename="Terminal"}
+quarto publish quarto-pub
+```
+
+Other venues: `gh-pages`, `netlify`, `connect`, `posit-cloud`
+
+Updates? Re-run `quarto publish`
+
+::: footer
+<https://quarto.org/docs/publishing/>
+:::
+
+
+## Your Turn
+
+::: task
+
+1.  Publish your site to Quarto Pub: 
+    
+    ``` {.bash filename="Terminal"}
+    quarto publish quarto-pub
+    ```
+
+2.  Experiment with different built-in themes.
+
+
+3.  Publish an update to Quarto Pub
+
+4. **Challenge**: Edit some of the hex colors in `styles.scss`
+
+:::
+
+# 5. Use listings for lists of content
+
+## A listing is...
+
+-   an automatically generated list of content
+-   styled via a template, (built-in `type`, or custom `template`)
+-   can be included on any page
+
+::: footer
+<https://quarto.org/docs/websites/website-listings.html>
+:::
+
+## Use listings for ...
+
+<iframe src="https://charlotte.quarto.pub/listings/" width="100%" height="550" title="Listing Examples">
+
+</iframe>
+
+::: footer
+<https://charlotte.quarto.pub/listings/>
+:::
+
+## `contents` can be a YAML file {.smaller}
+
+::::: columns
+::: {.column width="40%"}
+``` {.yaml filename="talks/index.qmd"}
+---
+title: Talks
+listing:
+  contents: talks.yml
+  type: table
+  fields: [title, venue, date]
+---
+```
+:::
+
+::: {.column width="60%"}
+``` {.yaml filename="talks/talks.yml"}
+- title: "Quarto: Reproducible Publishing"
+  date: 2024-03-01
+  venue: Oakridge National Lab
+  path: https://github.com/cwickham/oakridge
+- title: What's New in Quarto?
+  date: 2023-09-01
+  venue: "`posit::conf(2023)`"
+  path: https://youtu.be/WR08GESib9Y?si=vTxco6_yuEDV8TBC
+- title: This Month I Learned...
+  date: 2021-04-01
+  venue: Rladies Washington D.C., via Zoom 
+  path: https://cwickham.github.io/this-month-I-learned/#1
+```
+:::
+:::::
+
+# Wrap Up
+
+## Quarto Websites
+
+A minimal website only needs two files:
+
+::::: columns
+
+:::{.column}
+```{.yaml filename="_quarto.yml"}
+project: 
+  type: website
+```    
+:::
+
+:::{.column}
+```{.markdown filename="index.qmd"}
+---
+title: My homepage
+---
+```
+:::
+
+:::::
+
+-  Add pages by adding Quarto documents 
+-  Control navigation, website settings, theming etc. in `_quarto.yml`
+
+Explore docs at: <https://quarto.org/docs/websites/>
+
+## Why Quarto for Websites?
+
+-   You don't need to learn anything new for page content
+-   You get nice website features out of the box: GitHub links, social cards, navigation, etc.
+-   A lot of customization available via YAML options
+-   Customize style as much (or as little) as you want
+
+
+::: footer
+<https://charlotte.quarto.pub/dslc24>
+:::
+
+# Thank you!
+
+Special thanks to Lydia for organizing, coordinating and facilitating

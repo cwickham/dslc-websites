@@ -1,0 +1,106 @@
+---
+title: Pre-work
+---
+
+Before the workshop:
+
+1.  Get on Posit Cloud
+
+2.  Get a Quarto Pub account
+
+3.  Collect some content
+
+4.  *(Optional)* Get up to speed with Quarto
+
+If you have trouble with any of the above steps or have other questions, please reach out in the [workshop Slack channel](https://dslcio.slack.com/archives/C07QB5KCQ3V).
+
+## 1. Get on Posit Cloud
+
+We'll work in RStudio on Posit Cloud to make sure we can all hit the ground running, and not need to worry about installing anything.
+
+Join our workspace at: <https://posit.cloud/spaces/571691/join?access_code=fI9FfIvnh6O8b7QLuuzu0jCcwnbkW001K9WyycZK>
+
+If you don't want to use Posit Cloud, you can [set things up to work locally](#working-locally), but if you are new to Quarto, I'd highly recommend you use Posit Cloud, even if RStudio isn't your favorite IDE.
+
+## 2. Get a Quarto Pub account
+
+You need to publish your website somewhere to share it. I'll demonstrate this using Quarto Pub.
+
+To follow along, sign up for an account at [Quarto Pub](https://quartopub.com/sign-up).
+
+## 4. Collect some content
+
+There are a few things you might like to collect before the workshop:
+
+-   A paragraph about who you are (or what your site is about)
+-   A photo/image you would like on your home page
+-   A list of projects, talks, classes, or publications
+-   Any existing Quarto documents you would like to include in your site
+
+## 4. *(Optional)* Get up to speed with Quarto
+
+Before taking the workshop, you should be able to:
+
+-   Preview or render Quarto documents
+-   Identify the YAML header, Markdown content, and code cells in a Quarto document
+-   Specify Quarto options with YAML syntax
+-   Specify files using relative paths
+
+If you need to catch up, complete **one** of the following:
+
+-   Complete the [**Quarto** chapter](https://r4ds.hadley.nz/quarto) in R for Data Science
+
+-   Complete the [**Getting Started Tutorial**](https://quarto.org/docs/get-started/hello/rstudio.html) on the Quarto documentation site
+
+-   Watch the first 16mins of [**Getting Started with Quarto**](https://youtu.be/_f3latmOhew?si=p5bGyqOIfKHlyvb3) on YouTube
+
+------------------------------------------------------------------------
+
+## Working Locally {#working-locally}
+
+::: callout-caution
+Only complete these instructions if you are choosing not to use Posit Cloud.
+:::
+
+I highly recommend using Posit Cloud for the workshop. However, if you **really** don't want to work on Posit Cloud, you can get things set up to work locally.
+
+You'll need to:
+
+1.  Get the required software
+
+2.  Get the website template
+
+### Required Software
+
+-   [**Quarto**](https://quarto.org/docs/download/): v1.5
+
+-   **One** of the following IDEs:
+
+    -   [**RStudio**](https://posit.co/download/rstudio-desktop/)
+
+    -   [**VS Code**](https://code.visualstudio.com/download) and the [VS Code Quarto Extension](https://marketplace.visualstudio.com/items?itemName=quarto.quarto)
+
+    -   [Positron](https://github.com/posit-dev/positron/releases)and the Quarto Extension
+
+### Website Template
+
+Set up a new project (RStudio or Positron) or create and open a new Folder (VS Code). In the Terminal run:
+
+``` {.bash filename="Terminal"}
+quarto use template cwickham/minimal-website
+```
+
+Follow the prompts:
+
+-   `Y`, yes trust the authors
+
+-   `N`, don't create in a subdirectory
+
+Your project/folder should now be populated like:
+
+``` default
+├── _quarto.yml
+├── index.qmd
+├── profile.jpg
+└── styles.scss
+```

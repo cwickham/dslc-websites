@@ -1,0 +1,25 @@
+project:
+  type: website
+
+website:
+  title: Zero to Website with Quarto Workshop 
+  description: "Zero to website with Quarto Workshop for Data Science Learning Community 2024"
+  open-graph: true 
+  search: false
+  page-footer: "Made with ❤️ and Quarto"
+  sidebar:
+    title: Zero to Website with Quarto Workshop 
+    alignment: center
+    style: docked
+    logo: dslc_edu_line_white.png
+    contents:
+      - href: index.qmd
+        text: Home
+      - prework.qmd
+      - materials.qmd
+
+
+format:
+  html:
+    mainfont: "Atkinson Hyperlegible"
+    theme: [cosmo, styles.scss]
