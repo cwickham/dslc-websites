@@ -20,6 +20,9 @@ website:
         text: Home
       - prework.qmd
       - materials.qmd
+    tools:
+      - icon: github
+        href: https://github.com/cwickham/dslc-websites
 
 
 format:
