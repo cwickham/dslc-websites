@@ -37,7 +37,7 @@ Website + Slides: <https://charlotte.quarto.pub/dslc24>
 
 Hello, I'm Charlotte Wickham:
 
-- Developer Education at Posit
+- Developer Educator at Posit
 - In Corvallis, Oregon
 - Longtime RMarkdown user, now Quarto user
 
@@ -237,6 +237,8 @@ File path becomes URL path
 1. Put items on `left`
 1. Switch to a `sidebar` and back again
 2. Edit `tools`
+
+<https://quarto.org/docs/websites/website-navigation.html>
 
 # 3.  Make the style your own
 
