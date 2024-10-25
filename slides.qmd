@@ -13,9 +13,9 @@ format:
 
 Make sure you've:
 
-1. Joined the RStudio Cloud workspace:  
+1. Joined the Posit Cloud workspace: Link in Slack
 
-2. Started the "Website" assignment
+2. Started the "Website" project (look under "Content" tab)
 
 3. Created a Quarto Pub account: <https://quartopub.com/sign-up>
 
@@ -420,6 +420,20 @@ Explore docs at: <https://quarto.org/docs/websites/>
 ::: footer
 <https://charlotte.quarto.pub/dslc24>
 :::
+
+## Post Work
+
+*I'll post in Slack*
+
+* Share your URL
+
+* Ask questions in Slack
+
+* Get your website off Posit Cloud
+
+* Get set up to work locally
+
+* Explore other publishing methods
 
 # Thank you!
 
